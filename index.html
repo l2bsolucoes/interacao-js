@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- or -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +10,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interação com JS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styless/style.css">
 </head>
 <body>
-    
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="bx bx-headphone"></i>Soundbox
+        </a>
+
+        <!-- Menu -->
+        <ul class="nav">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Teach Specs</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contac Us</a></li>
+        </ul>
+
+        <!-- Header icons -->
+        <div class="header-icons">
+            <i class="bx bx-cart"></i>
+            <div id="menu">
+                <i class="bx bx-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="/contents/images/product1.png" alt="" class="one">
+        </div>
+
+        <div class="home-text">
+            <h1>Wireless <br> Headphone</h1>
+            <h5>The smarter way to listen</h5>
+            <h3>$199.00</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <div class="main">
+        <div class="row">
+            <li><img src="/contents/images/main1.png" onclick="slider('/contents/images/product1.png')"></li>
+        </div>
+
+        <div class="row2">
+            <li><img src="/contents/images/main2.png" onclick="slider('/contents/images/product2.png')"></li>
+        </div>
+        
+        <div class="row3">
+            <li><img src="/contents/images/main3.png" onclick="slider('/contents/images/product3.png')"></li>
+        </div>
+    </div>
+
+
+
+
+    <!-- Script -->
+    <script>
+        function slider (anything){
+            document.querySelector ('.one') .src = anything;
+        };
+
+        let menu = document.querySelector ('#menu');
+        let navbar = document.querySelector ('.nav');
+
+        menu.onclick = () => {
+            menu.classList.toggle ('bx-x');
+            nav.classList.toggle ('open');
+        }
+    </script>
 </body>
 </html>
